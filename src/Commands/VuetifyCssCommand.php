@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Itstudioat\VuetifyCss\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class VuetifyCssCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'vuetify-css';
 
     public $description = 'My command';
 
