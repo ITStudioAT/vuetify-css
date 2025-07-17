@@ -17,9 +17,6 @@ class VuetifyCssServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('vuetify-css')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_vuetify_css_table')
-            ->hasCommand(VuetifyCssCommand::class);
+            ->hasConfigFile();
     }
 }
