@@ -17,6 +17,16 @@ class VuetifyCssServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('vuetify-css')
-            ->hasConfigFile();
+            ->hasConfigFile()
+            ->hasAssets();
+    }
+
+      public function bootingPackage()
+    {
+        $this->publishes([
+            __DIR__.'/../resources/js/components' => resource_path('vendor/vuetify-css/components'),
+            __DIR__.'/../resources/js/css' => resource_path('vendor/vuetify-css/css'),
+            __DIR__.'/../resources/js/plugin.js' => resource_path('vendor/vuetify-css/plugin.js'),
+        ], 'vuetify-css-assets');
     }
 }
